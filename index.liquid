@@ -1,7 +1,56 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Planetary Playing Cards
+
+planets:
+- name: Sun
+  bio: Type G2V
+  color: "var(--sunColor)"
+  class: one
+
+- name: Mercury
+  bio: 0.39 AU
+  color: "var(--merColor)"
+
+- name: Venus
+  bio: 0.72 AU
+  color: "var(--venColor)"
+
+- name: Earth
+  bio: 1.00 AU
+  color: "var(--earthColor)"
+
+- name: Mars
+  bio: 1.52 AU
+  color: "var(--marsColor)"
+
+- name: Jupiter
+  bio: 5.20 AU
+  color: "var(--jupColor)"
+
+- name: Saturn
+  bio: 9.58 AU
+  color: "var(--satColor)"
+
+- name: Uranus
+  bio: 19.22 AU
+  color: "var(--urColor)"
+
+- name: Neptune
+  bio: 30.05 AU
+  color: "var(--nepColor)"
+  
+
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1>Planetary Playing Cards</h1>
+<div class="card-grid">
+    {% for planet in planets %}
+        {% include "planet-card.liquid" %}
+    {% endfor %}
+</div>
+
+<script>
+  ScrollReveal().reveal('h1', { delay: 50 });
+  ScrollReveal().reveal('.planet-card', {interval: 300 });
+</script>
