@@ -16,13 +16,12 @@
     --nepColor: linear-gradient(#355db9, #1942a2);
 }
 
-
 body {
     font-family: 'Rubik', sans-serif;
-    background: url(/images/bg.png);
+    background: var(--darkMain);
     background-size: 100%;
-    margin: 5% 10%;
-    
+    background-position: 40% 40%;
+    padding: 5% 10%;
 }
 
 h1, h2, p {
